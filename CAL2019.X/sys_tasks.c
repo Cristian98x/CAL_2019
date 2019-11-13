@@ -36,6 +36,14 @@ void TASK_10ms()
 
 void TASK_100ms()
 { 
+    if(a==1)
+    {
+        vDoHandleLight();
+        a=0;
+    }
+    else{
+        a++;
+    }
     
 }
 
@@ -46,6 +54,6 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-    a = !a;
-    GPIO_u8WritePortPin(PORT_A, 10, a);
+  //  a = !a;
+  //  GPIO_u8WritePortPin(PORT_A, 10, a);
 }

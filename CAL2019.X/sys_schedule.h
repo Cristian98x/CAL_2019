@@ -4,7 +4,7 @@
  *
  * Created on August 20, 2018, 9:45 AM
  */
-
+#include"light_sig.h"
 #ifndef SYS_SCHEDULE_H
 #define	SYS_SCHEDULE_H
 

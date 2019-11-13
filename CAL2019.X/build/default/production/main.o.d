@@ -1,4 +1,5 @@
 build/default/production/main.o:  \
 main.c  \
 sys_tasks.h  \
-sys_schedule.h 
+sys_schedule.h  \
+ light_sig.h 
