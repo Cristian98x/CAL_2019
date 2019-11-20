@@ -18,7 +18,7 @@ void vDoHandleLight()
    
   }
   else{
-      counter=0
+      counter=0;
   }
   counter++;
 }

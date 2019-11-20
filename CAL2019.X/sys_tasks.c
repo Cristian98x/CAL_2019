@@ -10,13 +10,16 @@
 
 #include "mcal_init.h"
 #include "asw_com.h"
+#include"rte.h"
+#include"asw_move.h"
 
 T_U16 a = 0;
 
 void TASK_Inits()
 {
     MCAL_vInit();
-    GPIO_u8SetPortPin(PORT_A, 10, DIGITAL ,OUTPUT);
+   // GPIO_u8SetPortPin(PORT_A, 10, DIGITAL ,OUTPUT);
+    ASW_MotInit();
 }
 
 void TASK_1ms()
@@ -36,24 +39,25 @@ void TASK_10ms()
 
 void TASK_100ms()
 { 
-    if(a==1)
-    {
-        vDoHandleLight();
-        a=0;
-    }
-    else{
-        a++;
-    }
+   // if(a==1)
+   // {
+   //     vDoHandleLight();
+   //     a=0;
+ //   }
+ //   else{
+  //      a++;
+ //   }
     
 }
 
 void TASK_500ms()
 { 
-
+    
 }
 
 void TASK_1000ms()
 {
   //  a = !a;
   //  GPIO_u8WritePortPin(PORT_A, 10, a);
+    ASW_Move();
 }
