@@ -5,4 +5,5 @@ rte.h  \
 hal_dc.h  \
  general.h  \
 general_types.h  \
-mcal_gpio.h 
+mcal_gpio.h  \
+hal_servo.h 

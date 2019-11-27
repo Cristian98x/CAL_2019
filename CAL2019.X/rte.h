@@ -6,6 +6,7 @@
  */
 #include"hal_dc.h"
 #include"xc.h"
+#include"hal_servo.h"
 #ifndef RTE_H
 #define	RTE_H
 
@@ -16,6 +17,8 @@ extern "C" {
 #define RTE_vSetMotDir Hal_vSetMotDir
 #define RTE_vMotInit Hal_vMotInit
 #define RTE_vSetMotSpeed Hal_vSetMotSpeed
+#define RTE_vSetServA Hal_vSetServA
+#define RTE_vInitServ Hal_vInitServ
     
 
 

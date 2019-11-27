@@ -59,5 +59,6 @@ void TASK_1000ms()
 {
   //  a = !a;
   //  GPIO_u8WritePortPin(PORT_A, 10, a);
-    ASW_Move();
+   // ASW_Move();
+    ASW_Servo();
 }
