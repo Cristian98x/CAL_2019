@@ -4,6 +4,7 @@
 void ASW_Move(){
     RTE_vSetMotDir(0);
     RTE_vSetMotSpeed(30);
+    
  }
    
 
@@ -27,4 +28,21 @@ void ASW_Servo()
        time=0;
    }
    
+}
+
+void ASW_MoveLineF()
+{
+    RTE_vSetMotDir(0);
+    T_U16 val;
+    val=RTE_u16GetLineFollower();
+    
+    if(val==63)
+    {
+        RTE_vSetMotSpeed(0);
+    }
+    else
+    {
+        RTE_vSetMotSpeed(30);
+    }
+    
 }

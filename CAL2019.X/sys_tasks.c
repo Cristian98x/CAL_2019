@@ -34,7 +34,7 @@ void TASK_5ms()
 
 void TASK_10ms()
 {   
-
+    
 }
 
 void TASK_100ms()
@@ -47,7 +47,7 @@ void TASK_100ms()
  //   else{
   //      a++;
  //   }
-    
+    ASW_MoveLineF();
 }
 
 void TASK_500ms()
@@ -60,5 +60,6 @@ void TASK_1000ms()
   //  a = !a;
   //  GPIO_u8WritePortPin(PORT_A, 10, a);
    // ASW_Move();
-    ASW_Servo();
+   // ASW_Servo();
+    
 }

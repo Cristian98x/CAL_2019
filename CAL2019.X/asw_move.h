@@ -16,6 +16,7 @@ extern "C" {
     extern void ASW_Move();
     extern void ASW_MotInit();
     extern void ASW_Servo();
+    extern void ASW_MoveLineF();
  
 
 #ifdef	__cplusplus

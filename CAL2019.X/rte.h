@@ -7,6 +7,7 @@
 #include"hal_dc.h"
 #include"xc.h"
 #include"hal_servo.h"
+#include"hal_lf.h"
 #ifndef RTE_H
 #define	RTE_H
 
@@ -19,6 +20,8 @@ extern "C" {
 #define RTE_vSetMotSpeed Hal_vSetMotSpeed
 #define RTE_vSetServA Hal_vSetServA
 #define RTE_vInitServ Hal_vInitServ
+//#define RTE_vSetLineFollower Hal_vSetLineFollower
+#define  RTE_u16GetLineFollower Hal_u16GetLineFollower
     
 
 
