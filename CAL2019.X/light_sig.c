@@ -1,6 +1,7 @@
 #include"light_sig.h"
 #include"sys_schedule.h"
 #include"general.h"
+#include "hal_battery.h"
 int counter=0;
 void vDoHandleLight()
 {
@@ -22,3 +23,19 @@ void vDoHandleLight()
   }
   counter++;
 }
+
+ void lowBattery()
+ {
+     
+     T_U8 baterie=Hal_readBattery();
+     if(baterie<=10)
+     {  
+       
+             GPIO_u8WritePortPin(PORT_A, 10, 3);
+         
+     }
+     if(baterie>20)
+     {
+         GPIO_u8WritePortPin(PORT_A, 10, 1);
+     }
+ }

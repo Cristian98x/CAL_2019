@@ -6,13 +6,34 @@
 #define POS_EDGE 0
 
 /* RF Interrupt Request Flag, set in INT2 by the nRF24L01 module*/
-extern BOOL bRF_IRQ;
-
-
+extern  BOOL bRF_IRQ;
+  BOOL bObs;
+ 
+  BOOL getPolarity()
+    {
+        return INTCON2bits.INT0EP;
+    }
+void setPolarity(BOOL polVal)
+{
+    INTCON2bits.INT0EP=polVal;
+}
 /* Obstacle sensor interrupt */
 /*****************************/
 void __attribute__((__interrupt__, no_auto_psv)) _INT0Interrupt(void)
 {
+    IFS0bits.INT0IF=0;
+    if(getPolarity()==1)
+    { 
+        bObs=1;
+        setPolarity(POS_EDGE);
+    }
+    else
+    {
+        bObs=0;
+        setPolarity(NEG_EDGE);
+    }
+       
+    
     /* Write the code to detect obstacle */
 }
 

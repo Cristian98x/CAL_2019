@@ -12,14 +12,17 @@
 #include "asw_com.h"
 #include"rte.h"
 #include"asw_move.h"
+#include "light_sig.h"
 
 T_U16 a = 0;
 
 void TASK_Inits()
 {
     MCAL_vInit();
-   // GPIO_u8SetPortPin(PORT_A, 10, DIGITAL ,OUTPUT);
+    GPIO_u8SetPortPin(PORT_A, 10, DIGITAL ,OUTPUT);
     ASW_MotInit();
+    ADC_vInit();
+    
 }
 
 void TASK_1ms()
@@ -29,7 +32,8 @@ void TASK_1ms()
 
 void TASK_5ms()
 {
-
+   // lowBattery();
+    
 }
 
 void TASK_10ms()
@@ -47,7 +51,15 @@ void TASK_100ms()
  //   else{
   //      a++;
  //   }
-    ASW_MoveLineF();
+   // ASW_MoveLineF();
+    if(bObs==1)
+    {
+        GPIO_u8WritePortPin(PORT_A, 10, 1);
+    }
+    else 
+    { 
+        GPIO_u8WritePortPin(PORT_A, 10, 0);
+    }
 }
 
 void TASK_500ms()

@@ -12,7 +12,9 @@
 extern "C" {
 #endif
 
-    extern void vDoHandleLight();
+   // extern void vDoHandleLight();
+    extern void lowBattery();
+   // extern void batteryLevel();
 
 
 
